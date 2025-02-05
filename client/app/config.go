@@ -7,13 +7,10 @@ import (
 	"github.com/joho/godotenv"
 )
 
-// Config holds the configuration for the client.
 type Config struct {
 	ServerAddress string
 }
 
-// LoadConfig loads configuration from environment variables.
-// It also loads the .env file if present.
 func LoadConfig() (*Config, error) {
 	_ = godotenv.Load()
 
